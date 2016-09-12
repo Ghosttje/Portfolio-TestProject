@@ -1,0 +1,139 @@
+body {
+    background: rgba(230, 230,230, 1);
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+}
+
+h1 {
+    color: #719e40;
+    font-size: 100px;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+/* Navigationbar */
+.mynavbar {
+	background: rgba(230, 230,230, 1);
+    border-bottom-color: rgba(255,255,255,0.25);
+    border-bottom-width: 2px;
+    font-weight:bold;
+}
+
+.mynavbar .navbar-brand {
+    margin-left: 20px;
+}
+
+.mynavbar .navbar-right {
+    margin-right: 20px;
+}
+
+.headercontainer {
+    height: 600px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+/* Projects */
+.thumbnail,a:hover {
+     text-decoration:none !important;
+}
+.thumbnail,a:hover h3 {
+    text-decoration: underline;
+}
+
+.languageoverlay img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/* Portfolio page */
+.portfolioheader {
+    background-image: url('../img/programming.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    padding: 30px 20px 20px 20px;
+}
+
+.portfolioheader .rightpanel {
+  float: right;
+  position: relative;
+  width: 60px;
+}
+
+.profilepanel {
+    background: rgba(230, 230,230, 0.95);
+    height: 550px;
+}
+
+.profilepanel img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 250px;
+}
+
+.linkpanel {
+    float: right;
+    background: rgba(230, 230,230, 0.95);
+    height: 60px;
+    width: 100%;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+}
+
+.linkpanel:hover {
+    width: 150px;
+}
+
+.linkpanel .panel-body
+{
+    padding: 5px;
+    overflow: hidden;
+    height: 55px;
+}
+
+.linkpanel img {
+    width: 48px;
+    float: left;
+}
+
+.linkpanel .panel-body div {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.knowledgepanel {
+    background: rgba(230, 230,230, 0.95);
+    height: 100px;
+}
+
+/* Project page */
+.topcontainer {
+    margin-top: 60px;
+}
+
+.carouselimg {
+    margin: auto;
+    height: 400px !important;
+}
+
+.container-content {
+    margin-top: 50px;
+}
+
+.container-content .projectdetail {
+    display: inline-block;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-content .projects {
+    display: inline-block;
+    position: absolute;
+    vertical-align: top;
+    width: 300px;
+    margin-left: 25px;
+}

@@ -1,0 +1,54 @@
+{
+   "result":"SUCCESS",
+   "resultMessage":"",
+   "data":[
+        {
+            "id": 6,
+            "name":"TestProject6",
+            "img":"img/projects/photo-1457305237443-44c3d5a30b89.jpg",
+            "location":"Infrabel via Bitconsult",
+            "description":"Somewhere",
+            "languages":["CSharp","VisualStudio"]
+        },
+        {
+            "id": 5,
+            "name":"TestProject5",
+            "img":"img/projects/photo-1453060113865-968cea1ad53a.jpg",
+            "location":"Home",
+            "description":"test description 2",
+            "languages":["Android"]
+        },
+        {
+            "id": 4,
+            "name":"TestProject4",
+            "img":"img/projects/photo-1457305237443-44c3d5a30b89.jpg",
+            "location":"Somewhere",
+            "description":"",
+            "languages":["CSharp","VisualStudio"]
+        },
+        {
+            "id": 3,
+            "name":"TestProject3",
+            "img":"img/projects/photo-1457612928689-a1ab27da0dad.jpg",
+            "location":"Somewhere",
+            "description":"",
+            "languages":["CSharp","VisualStudio"]
+        },
+        {
+            "id": 2,
+            "name":"TestProject2",
+            "img":"img/projects/photo-1457305237443-44c3d5a30b89.jpg",
+            "location":"Somewhere",
+            "description":"",
+            "languages":["CSharp"]
+        },
+        {
+            "id": 1,
+            "name":"TestProject1",
+            "img":"img/projects/photo-1454165205744-3b78555e5572.jpg",
+            "location":"Home",
+            "description":"",
+            "languages":["Android"]
+        }
+   ]
+}   

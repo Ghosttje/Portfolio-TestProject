@@ -1,0 +1,21 @@
+{
+   "result":"SUCCESS",
+   "resultMessage":"",
+   "data":[
+      {
+         "name":"CSharp",
+		 "fullName":"C#",
+         "img":"img/languages/csharp.png"
+      },
+      {
+         "name":"Android",
+		 "fullName":"Android",
+         "img":"img/languages/android.png"
+      },
+      {
+         "name":"VisualStudio",
+		 "fullName":"Visual Studio",
+         "img":"img/languages/visualstudio.png"
+      }
+   ]
+}   
