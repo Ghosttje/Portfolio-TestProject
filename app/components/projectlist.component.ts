@@ -31,6 +31,7 @@ export class ProjectList implements OnInit {
     }
     
     ngOnInit() {
-        this.getProjects();
+        setTimeout(() => this.getProjects(), 0)
+        // this.getProjects();
     }
 }
