@@ -11,6 +11,7 @@ import { Project } from '../models/project';
 export class ProjectDetail implements OnInit {
     public project: Project;
     public slides: Array<any> = [];
+    public selectedProjectId: number;
     
     constructor(private projectsService: ProjectsService, private route: ActivatedRoute) {
         for (let i = 0; i < 4; i++) {
@@ -20,9 +21,10 @@ export class ProjectDetail implements OnInit {
     
     ngOnInit() {
         this.route.params.map(params => params['id']).subscribe((id) => {
+            this.selectedProjectId = id;
             this.projectsService.getProjects().subscribe((projects) => {
-                    this.project = projects.filter((item) => item.id == id)[0]
-                });
+                this.project = projects.filter((item) => item.id == id)[0]
+            });
         });
     }
 

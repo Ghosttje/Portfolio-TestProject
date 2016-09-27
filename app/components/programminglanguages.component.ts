@@ -10,9 +10,8 @@ import { ProgrammingLanguage } from '../models/programmingLanguage';
 })
 export class ProgrammingLanguages implements OnInit {
     @Input()
-    names: string[];
+    ids: number[];
     programmingLanguages: ProgrammingLanguage[];
-    
     constructor(private programmingLanguagesService: ProgrammingLanguagesService) {
         
     }
@@ -20,9 +19,9 @@ export class ProgrammingLanguages implements OnInit {
     getProgrammingLanguages() {
         this.programmingLanguagesService.getProgrammingLanguages().subscribe(programmingLanguages => {
             var result: ProgrammingLanguage[] = [];
-            this.names.forEach((name: string) => {
+            this.ids.forEach((key: number) => {
                 programmingLanguages.forEach((programmingLanguage: ProgrammingLanguage) => {
-                    if (programmingLanguage.name == name)
+                    if (programmingLanguage.id == key)
                     {
                         result.push(programmingLanguage);
                     }
@@ -33,6 +32,6 @@ export class ProgrammingLanguages implements OnInit {
     }
     
     ngOnInit() {
-        this.getProgrammingLanguages();
+        setTimeout(() => this.getProgrammingLanguages(), 0);
     }
 }

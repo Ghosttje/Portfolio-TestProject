@@ -17,6 +17,7 @@ var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
 var app_component_1 = require('./app.component');
 var projectdetail_page_1 = require('./pages/projectdetail.page');
 var projectlist_component_1 = require('./components/projectlist.component');
+var projectsidelist_component_1 = require('./components/projectsidelist.component');
 var programminglanguages_component_1 = require('./components/programminglanguages.component');
 var AppModule = (function () {
     function AppModule() {
@@ -24,7 +25,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule, ng2_bootstrap_1.Ng2BootstrapModule],
-            declarations: [app_component_1.AppComponent, projectdetail_page_1.ProjectDetail, projectlist_component_1.ProjectList, programminglanguages_component_1.ProgrammingLanguages],
+            declarations: [app_component_1.AppComponent, projectdetail_page_1.ProjectDetail, projectlist_component_1.ProjectList, projectsidelist_component_1.ProjectSideList, programminglanguages_component_1.ProgrammingLanguages],
             providers: [app_routing_1.appRoutingProviders, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
             bootstrap: [app_component_1.AppComponent],
         }), 

@@ -1,0 +1,11 @@
+<div>
+    <div *ngFor="let project of projects; let i = index">
+        <a [routerLink]="['/projectdetail', project.id]" class="thumbnail project">
+            <img [src]="project.img" [alt]="project.name" />
+            <div class="caption">
+                <programming-languages [ids]="project.languages"></programming-languages>
+                <h3>{{project.name}}</h3>
+            </div>
+        </a>
+    </div>
+</div>

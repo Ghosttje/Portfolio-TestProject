@@ -1,5 +1,5 @@
 export class ProgrammingLanguage {
+    id: number;
     name: string;
-    fullName: string;
     img: string;
 }

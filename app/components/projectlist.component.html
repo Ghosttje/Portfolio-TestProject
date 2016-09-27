@@ -5,7 +5,7 @@
       <a [routerLink]="['/projectdetail', project.id]" class="thumbnail project">
         <img [src]="project.img" [alt]="project.name" />
         <div class="caption">
-          <programming-languages [names]="project.languages"></programming-languages>
+          <programming-languages [ids]="project.languages"></programming-languages>
           <h3>{{project.name}}</h3>
         </div>
       </a>

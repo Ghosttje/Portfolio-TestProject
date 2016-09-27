@@ -23,6 +23,7 @@ var ProjectDetail = (function () {
     ProjectDetail.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.map(function (params) { return params['id']; }).subscribe(function (id) {
+            _this.selectedProjectId = id;
             _this.projectsService.getProjects().subscribe(function (projects) {
                 _this.project = projects.filter(function (item) { return item.id == id; })[0];
             });

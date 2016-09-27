@@ -11,40 +11,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var projects_service_1 = require('../services/projects.service');
 var sorter_logic_1 = require('../logic/sorter.logic');
-var ProjectList = (function () {
-    function ProjectList(projectsService) {
+var ProjectSideList = (function () {
+    function ProjectSideList(projectsService) {
         this.projectsService = projectsService;
-        this.limit = 0;
+        this.notShowId = 0;
         this.sorter = new sorter_logic_1.SorterLogic();
     }
-    ProjectList.prototype.getProjects = function () {
+    ProjectSideList.prototype.getProjects = function () {
         var _this = this;
         this.projectsService.getProjects().subscribe(function (projects) {
-            if (_this.limit == 0) {
-                _this.projects = projects.sort(_this.sorter.compareProject);
+            var result = [];
+            if (_this.notShowId != 0) {
+                projects.forEach(function (project) {
+                    if (project.id != _this.notShowId) {
+                        result.push(project);
+                    }
+                });
+                _this.projects = result.sort(_this.sorter.compareProject);
             }
             else {
-                _this.projects = projects.sort(_this.sorter.compareProject).slice(0, _this.limit);
+                _this.projects = projects.sort(_this.sorter.compareProject);
             }
         });
     };
-    ProjectList.prototype.ngOnInit = function () {
+    ProjectSideList.prototype.ngOnInit = function () {
         var _this = this;
         setTimeout(function () { return _this.getProjects(); }, 0);
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], ProjectList.prototype, "limit", void 0);
-    ProjectList = __decorate([
+    ], ProjectSideList.prototype, "notShowId", void 0);
+    ProjectSideList = __decorate([
         core_1.Component({
-            selector: 'projectlist',
-            templateUrl: 'app/components/projectlist.component.html',
+            selector: 'projectsidelist',
+            templateUrl: 'app/components/projectsidelist.component.html',
             providers: [projects_service_1.ProjectsService]
         }), 
         __metadata('design:paramtypes', [projects_service_1.ProjectsService])
-    ], ProjectList);
-    return ProjectList;
+    ], ProjectSideList);
+    return ProjectSideList;
 }());
-exports.ProjectList = ProjectList;
-//# sourceMappingURL=projectlist.component.js.map
+exports.ProjectSideList = ProjectSideList;
+//# sourceMappingURL=projectsidelist.component.js.map

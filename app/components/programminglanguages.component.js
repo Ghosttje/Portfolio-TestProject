@@ -18,9 +18,9 @@ var ProgrammingLanguages = (function () {
         var _this = this;
         this.programmingLanguagesService.getProgrammingLanguages().subscribe(function (programmingLanguages) {
             var result = [];
-            _this.names.forEach(function (name) {
+            _this.ids.forEach(function (key) {
                 programmingLanguages.forEach(function (programmingLanguage) {
-                    if (programmingLanguage.name == name) {
+                    if (programmingLanguage.id == key) {
                         result.push(programmingLanguage);
                     }
                 });
@@ -29,12 +29,13 @@ var ProgrammingLanguages = (function () {
         });
     };
     ProgrammingLanguages.prototype.ngOnInit = function () {
-        this.getProgrammingLanguages();
+        var _this = this;
+        setTimeout(function () { return _this.getProgrammingLanguages(); }, 0);
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Array)
-    ], ProgrammingLanguages.prototype, "names", void 0);
+    ], ProgrammingLanguages.prototype, "ids", void 0);
     ProgrammingLanguages = __decorate([
         core_1.Component({
             selector: 'programming-languages',

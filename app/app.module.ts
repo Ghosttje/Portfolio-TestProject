@@ -10,11 +10,12 @@ import { AppComponent } from './app.component';
 import { ProjectDetail } from './pages/projectdetail.page';
 
 import { ProjectList } from './components/projectlist.component';
+import { ProjectSideList } from './components/projectsidelist.component';
 import { ProgrammingLanguages } from './components/programminglanguages.component';
 
 @NgModule({
     imports:        [ BrowserModule, routing, HttpModule, Ng2BootstrapModule ],
-    declarations:   [ AppComponent, ProjectDetail, ProjectList, ProgrammingLanguages ],
+    declarations:   [ AppComponent, ProjectDetail, ProjectList, ProjectSideList, ProgrammingLanguages ],
     providers:      [ appRoutingProviders, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
     bootstrap:      [ AppComponent ],
 })

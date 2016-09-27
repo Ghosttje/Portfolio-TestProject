@@ -4,5 +4,5 @@ export class Project {
     img: string;
     location: string;
     description: string;
-    languages: string[];
+    languages: number[];
 }

@@ -6,7 +6,6 @@ body {
     color: gray;
     font-size: 18px;
 }
-
 h1 {
     color: #719e40;
     font-size: 100px;
@@ -21,15 +20,12 @@ h1 {
     border-bottom-width: 2px;
     font-weight:bold;
 }
-
 .mynavbar .navbar-brand {
     margin-left: 20px;
 }
-
 .mynavbar .navbar-right {
     margin-right: 20px;
 }
-
 .headercontainer {
     height: 600px;
     background-color: rgba(0,0,0,0.5) !important;
@@ -42,7 +38,6 @@ h1 {
 .thumbnail,a:hover h3 {
     text-decoration: underline;
 }
-
 .languageoverlay img {
     max-width: 50px;
     max-height: 50px;
@@ -55,24 +50,20 @@ h1 {
     background-repeat: no-repeat;
     padding: 30px 20px 20px 20px;
 }
-
 .portfolioheader .rightpanel {
   float: right;
   position: relative;
   width: 60px;
 }
-
 .profilepanel {
     background: rgba(230, 230,230, 0.95);
     height: 550px;
 }
-
 .profilepanel img {
     width: 100%;
     max-width: 350px;
     max-height: 250px;
 }
-
 .linkpanel {
     float: right;
     background: rgba(230, 230,230, 0.95);
@@ -81,59 +72,66 @@ h1 {
     -webkit-transition: width 1s; /* Safari */
     transition: width 1s;
 }
-
 .linkpanel:hover {
     width: 150px;
 }
-
 .linkpanel .panel-body
 {
     padding: 5px;
     overflow: hidden;
     height: 55px;
 }
-
 .linkpanel img {
     width: 48px;
     float: left;
 }
-
 .linkpanel .panel-body div {
     margin-top: 12px;
     margin-bottom: 12px;
     text-align: center;
 }
-
 .knowledgepanel {
     background: rgba(230, 230,230, 0.95);
     height: 100px;
 }
 
-/* Project page */
+/* Project detail */
 .topcontainer {
     margin-top: 60px;
 }
-
 .carouselimg {
     margin: auto;
     height: 400px !important;
 }
-
 .container-content {
     margin-top: 50px;
-}
-
-.container-content .projectdetail {
-    display: inline-block;
-    width: 720px;
     margin-left: auto;
     margin-right: auto;
 }
-
+.container-content .projectdetail {
+    display: inline-block;
+    width: 720px;
+    text-align: left;
+}
 .container-content .projects {
     display: inline-block;
-    position: absolute;
     vertical-align: top;
     width: 300px;
     margin-left: 25px;
+}
+.container-content .projectdetail .thumbnail.header {
+    display: flex;
+}
+.container-content .projectdetail .thumbnail.header img {
+    height: 150px;
+}
+.container-content .projectdetail .thumbnail.header div {
+    flex: 1;
+    margin-left: 5px;
+}
+.container-content .projectdetail .thumbnail.header div h2 {
+    margin-left: 5px;
+}
+.container-content .projectdetail .thumbnail.detail {
+    margin-top: 20px;
 }

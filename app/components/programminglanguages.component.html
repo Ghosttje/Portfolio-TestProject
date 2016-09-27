@@ -1,6 +1,6 @@
- <div class="languageoverlay">
+<div class="languageoverlay">
     <span *ngFor="let programmingLanguage of programmingLanguages; let lastElement = last">
-        <img [src]="programmingLanguage.img" [alt]="programmingLanguage.fullName" />
+        <img [src]="programmingLanguage.img" [alt]="programmingLanguage.name" />
         <span [hidden]="lastElement" class="languageseperator">+</span>
     </span>
 </div>

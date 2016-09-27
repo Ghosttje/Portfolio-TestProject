@@ -8,7 +8,7 @@
             "img":"img/projects/photo-1457305237443-44c3d5a30b89.jpg",
             "location":"Infrabel via Bitconsult",
             "description":"Somewhere",
-            "languages":["CSharp","VisualStudio"]
+            "languages":[1]
         },
         {
             "id": 5,
@@ -16,7 +16,7 @@
             "img":"img/projects/photo-1453060113865-968cea1ad53a.jpg",
             "location":"Home",
             "description":"test description 2",
-            "languages":["Android"]
+            "languages":[3]
         },
         {
             "id": 4,
@@ -24,7 +24,7 @@
             "img":"img/projects/photo-1457305237443-44c3d5a30b89.jpg",
             "location":"Somewhere",
             "description":"",
-            "languages":["CSharp","VisualStudio"]
+            "languages":[4, 2]
         },
         {
             "id": 3,
@@ -32,7 +32,7 @@
             "img":"img/projects/photo-1457612928689-a1ab27da0dad.jpg",
             "location":"Somewhere",
             "description":"",
-            "languages":["CSharp","VisualStudio"]
+            "languages":[4, 2]
         },
         {
             "id": 2,
@@ -40,7 +40,7 @@
             "img":"img/projects/photo-1457305237443-44c3d5a30b89.jpg",
             "location":"Somewhere",
             "description":"",
-            "languages":["CSharp"]
+            "languages":[4]
         },
         {
             "id": 1,
@@ -48,7 +48,7 @@
             "img":"img/projects/photo-1454165205744-3b78555e5572.jpg",
             "location":"Home",
             "description":"",
-            "languages":["Android"]
+            "languages":[3]
         }
    ]
 }   

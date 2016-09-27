@@ -5,13 +5,13 @@ import { Project } from '../models/project';
 import { SorterLogic } from '../logic/sorter.logic'
 
 @Component({
-    selector: 'projectlist',
-    templateUrl: 'app/components/projectlist.component.html',
+    selector: 'projectsidelist',
+    templateUrl: 'app/components/projectsidelist.component.html',
     providers: [ProjectsService]
 })
-export class ProjectList implements OnInit {
+export class ProjectSideList implements OnInit {
     @Input()
-    limit: number = 0;
+    notShowId: number = 0;
     projects: Project[];
     sorter: SorterLogic;
     
@@ -21,11 +21,20 @@ export class ProjectList implements OnInit {
     
     getProjects() {
         this.projectsService.getProjects().subscribe(projects => {
-            if (this.limit == 0)
+            var result: Project[] = [];
+            if (this.notShowId != 0)
+            {
+                projects.forEach((project: Project) => {
+                    if (project.id != this.notShowId)
+                    {
+                        result.push(project);
+                    }
+                });
+                this.projects = result.sort(this.sorter.compareProject);
+            }
+            else
             {
                 this.projects = projects.sort(this.sorter.compareProject);
-            } else {
-                this.projects = projects.sort(this.sorter.compareProject).slice(0, this.limit);
             }
         });
     }

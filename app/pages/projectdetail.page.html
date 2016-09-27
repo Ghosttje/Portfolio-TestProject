@@ -1,10 +1,15 @@
-<div class="container-fluid container-content" *ngIf="project">
+<div class="container-content" *ngIf="project">
     <div class="projectdetail">
-        <img [src]="project.img" [alt]="project.name" style="height: 150px" />
-        <h2>{{project.name}}</h2>
+        <div class="thumbnail header">
+            <img [src]="project.img" [alt]="project.name" class="projectImage" />
+            <div>
+                <h2>{{project.name}}</h2>
+                <programming-languages [ids]="project.languages"></programming-languages>
+            </div>
+        </div>
         <div>
             <carousel interval="5000" noWrap="false">
-            <slide *ngFor="let slidez of slides; let index=index">
+                <slide *ngFor="let slidez of slides; let index=index">
                     <img [src]="slidez.image" class="carouselimg" />
                     <div class="carousel-caption">
                         <h4>Slide {{slidez.id}}</h4>
@@ -13,10 +18,11 @@
                 </slide>
             </carousel>
         </div>
-        <p>{{project.description}}</p>
+        <div class="thumbnail detail">
+            <p>{{project.description}}</p>
+        </div>
     </div>
-    <div class="projects hidden-mm hidden-sm hidden-xs" style="background: red">
-        qsdfqsdfqsdf
-        <projectlist></projectlist>
-    </div>     
+    <div class="projects hidden-mm hidden-sm hidden-xs">
+        <projectsidelist [notShowId]="selectedProjectId"></projectsidelist>
+    </div>
 </div>
